@@ -8,13 +8,13 @@ RSpec.describe User do
   context "區分會員" do
     it "是會員" do
       user = User.new
-      result = user.mobile
+      result = user.mobile(0912345678)
       expect(result).to be true
     end
 
     it "非會員" do
       user = User.new
-      result = user.mobile
+      result = user.mobile(0922446688)
       expect(result).to be false
     end
   end
